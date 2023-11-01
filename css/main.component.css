@@ -16,4 +16,25 @@ body {
   font-family: "Roboto Regular", sans-serif;
   margin: 0px;
   padding: 0px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.main {
+  background-color: #FAFAFA;
+}
+.main .main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main .main-info .main-info__title {
+  font-family: "Static", sans-serif;
+  margin: 0px;
+  margin-top: 40px;
+}
+.main .main-info .main-info__text {
+  margin: 0px;
+  margin-top: 10px;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 18px;
+}/*# sourceMappingURL=main.component.css.map */

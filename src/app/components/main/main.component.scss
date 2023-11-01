@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+.main{
+  background-color: $main-background-color;
+
+  .main-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .main-info__title{
+      font-family: 'Static', sans-serif;
+      margin: 0px;
+      margin-top: 40px;
+    }
+
+    .main-info__text{
+      margin: 0px;
+      margin-top: 10px;
+      font-family: 'Lato Regular', sans-serif;
+      font-size: 18px;
+    }
+  }
+}
