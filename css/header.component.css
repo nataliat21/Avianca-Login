@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Roboto Regular", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Styles for the website header section on mobile */
+.header {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+.header .header__logo {
+  padding: 0px;
+}
+
+@media (min-width: 992px) {
+  /* Styles for the website header section on desktop */
+  .header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+  }
+  .header .header__logo {
+    padding: 15px 0px 10px 95px;
+  }
+}/*# sourceMappingURL=header.component.css.map */
