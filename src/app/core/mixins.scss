@@ -1,0 +1,6 @@
+/* Mixin to set flex align and justify content property */
+@mixin set-flex-align-and-justify-content($align-items, $justify-content){
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
