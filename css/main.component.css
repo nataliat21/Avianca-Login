@@ -16,140 +16,115 @@ body {
 
 .main {
   background-color: #FAFAFA;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Styles for the title container and informational text on desktop*/
-  /* Styles for the main image container and the web page login form on desktop*/
-}
-.main .main-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  /* Styles for the title container and informational text on mobile*/
+  /* Styles for the main image container and the web page login form on mobile*/
 }
 .main .main-info .main-info__title {
+  text-align: center;
   font-family: "Static", sans-serif;
   margin: 0px;
-  margin-top: 40px;
+  font-size: 30px;
+  padding-top: 30px;
 }
 .main .main-info .main-info__text {
-  margin: 0px;
-  margin-top: 10px;
-  font-family: "Lato Regular", sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 .main .main-card {
-  margin: 40px 170px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  overflow: hidden;
   background-color: #FFFFFF;
+  margin: 30px 10px;
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
-}
-.main .main-card .main-card-image {
-  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.main .main-card .main-card-image .main-card-image__img--desktop {
+  display: none;
+}
+.main .main-card .main-card-image .main-card-image__img--mobile {
+  width: 100%;
 }
 .main .main-card .main-card-login {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0px 50px;
-  width: 440px;
+  margin: 20px 20px;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account__title {
-  color: #2A2D2F;
-  margin: 0px;
-  margin-bottom: 30px;
+  font-size: 23px;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn {
   border-radius: 30px;
-  padding: 5px 40px;
+  padding: 10px 30px;
   margin-right: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 20px;
   font-weight: bold;
   font-family: "Lato Regular", sans-serif;
   border: 2px solid black;
-  margin-bottom: 0px;
   background-color: #FFFFFF;
-}
-.main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn:hover {
-  background-color: rgba(180, 180, 180, 0.363);
-  transition: 0.5s ease;
+  white-space: nowrap;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn .main-card-login-account-button__btn--icon {
-  margin-right: 15px;
+  margin-right: 10px;
 }
-.main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn:last-child {
+.main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn .main-card-login-account-button__btn:last-child {
   margin-right: 0;
 }
 .main .main-card .main-card-login .main-card-login-divider {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 0px;
+  margin: 30px 0px;
 }
 .main .main-card .main-card-login .main-card-login-divider .main-card-login-divider__line {
   width: 30%;
 }
 .main .main-card .main-card-login .main-card-login-divider .main-card-login-divider__text {
-  white-space: nowrap;
+  text-align: center;
   font-size: 14px;
-  margin: 10px;
   color: #5A5A5A;
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user {
   border: 1px solid #D9D9D9;
   border-radius: 5px;
-  padding: 10px 10px;
+  padding: 20px 10px;
 }
-.main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title {
-  font-size: 11px;
-  color: #5A5A5A;
-  font-weight: bold;
-  margin: 5px 0px;
-}
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title,
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__text {
-  font-weight: bold;
-  margin: 0px;
+  display: none;
+}
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title--mobile {
+  border: none;
+  font-size: 15px;
+  outline: none;
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password {
   border: 1px solid #D9D9D9;
   border-radius: 5px;
-  margin: 15px 0px;
-  padding: 10px 10px;
+  padding: 20px 10px;
+  margin-top: 15px;
 }
-.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__title {
-  font-size: 11px;
-  color: #5A5A5A;
-  font-weight: bold;
-  margin: 5px 0px;
-}
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__title,
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__text {
-  font-weight: 600;
-  font-size: 17px;
-  margin: 0px;
+  display: none;
+}
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-mobile {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
-.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__text .main-card-login-input-password__text--icon {
-  display: flex;
-  align-items: baseline;
-  padding-right: 20px;
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-mobile .main-card-login-input-password-mobile__title {
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+.main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop {
+  display: none;
 }
 .main .main-card .main-card-login .main-card-login-alert .main-card-login-alert__lifemiles {
   cursor: pointer;
@@ -158,7 +133,7 @@ body {
   color: #34b7c9;
 }
 .main .main-card .main-card-login .main-card-login-alert .main-card-login-alert__policy {
-  font-size: 12px;
+  font-size: 13px;
   margin: 30px 0px;
   cursor: pointer;
 }
@@ -172,32 +147,140 @@ body {
 .main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__login {
   border-radius: 30px;
   font-family: "Lato Regular", sans-serif;
-  padding: 10px 160px;
+  padding: 10px 0px;
   font-size: 20px;
   font-weight: 600;
   background-color: #1B1B1B;
   color: #FFFFFF;
   border: 2px solid #1B1B1B;
 }
-.main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__login:hover {
-  background-color: #424040;
-  transition: 0.5s ease;
-  border: 2px solid #424040;
-}
 .main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__account {
   border-radius: 30px;
   font-family: "Lato Regular", sans-serif;
-  padding: 10px 160px;
+  padding: 10px 0px;
   font-size: 20px;
   font-weight: 600;
   margin-top: 25px;
   white-space: nowrap;
   border: 2px solid #1B1B1B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__account:hover {
-  background-color: rgba(180, 180, 180, 0.363);
-  transition: 0.5s ease;
+
+@media (max-width: 480px) {
+  .main {
+    /* Styles for the title container and informational text on mobile*/
+  }
+  .main .main-card {
+    /* Styles for the main image container and the web page login form on mobile*/
+  }
+  .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Styles for the title container and informational text on desktop*/
+    /* Styles for the main image container and the web page login form on desktop*/
+  }
+  .main .main-info .main-info__title {
+    font-size: 35px;
+    padding-top: 40px;
+  }
+  .main .main-info .main-info__text {
+    font-size: 20px;
+  }
+  .main .main-card {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 950px;
+  }
+  .main .main-card .main-card-image .main-card-image__img--desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main .main-card .main-card-image .main-card-image__img--mobile {
+    display: none;
+  }
+  .main .main-card .main-card-login {
+    margin: 20px 60px;
+  }
+  .main .main-card .main-card-login .main-card-login-account .main-card-login-account__title {
+    font-size: 25px;
+  }
+  .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn {
+    padding: 5px 20px;
+  }
+  .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn:hover {
+    background-color: rgba(180, 180, 180, 0.363);
+    transition: 0.5s ease;
+  }
+  .main .main-card .main-card-login .main-card-login-divider .main-card-login-divider__text {
+    white-space: nowrap;
+    margin: 0px 5px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user {
+    padding: 10px 10px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title {
+    display: block;
+    font-size: 11px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__text {
+    display: block;
+    border: none;
+    outline: none;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title--mobile {
+    display: none;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password {
+    padding: 10px 10px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__title {
+    display: block;
+    font-size: 11px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-mobile {
+    display: none;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop .main-card-login-input-password-desktop__text {
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop .main-card-login-input-password-desktop__icon {
+    margin-right: 10px;
+  }
+  .main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__login:hover {
+    background-color: rgb(87, 86, 86);
+    transition: 0.5s ease;
+    border: 2px solid rgb(87, 86, 86);
+  }
+  .main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__account:hover {
+    background-color: rgba(180, 180, 180, 0.788);
+    transition: 0.5s ease;
+  }
 }/*# sourceMappingURL=main.component.css.map */
