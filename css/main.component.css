@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-/* Mixin to set flex align and justify content property */
+/* Mixin to set flex align and justify content properties */
+/* mixin to set background color and border radius properties*/
+/* mixin to set border, outline and font size properties*/
+/*mixin to set the number of columns */
+/*mixin to set the direction of elements */
 @font-face {
   font-family: "Static";
   src: url("../src/assets/fonts/Static.ttf") format("truetype");
@@ -32,8 +36,8 @@ body {
 }
 .main .main-card {
   background-color: #FFFFFF;
-  margin: 30px 10px;
   border-radius: 20px;
+  margin: 30px 10px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
   display: flex;
@@ -56,6 +60,7 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn {
+  background-color: #FFFFFF;
   border-radius: 30px;
   padding: 10px 30px;
   margin-right: 15px;
@@ -66,7 +71,6 @@ body {
   font-weight: bold;
   font-family: "Lato Regular", sans-serif;
   border: 2px solid black;
-  background-color: #FFFFFF;
   white-space: nowrap;
 }
 .main .main-card .main-card-login .main-card-login-account .main-card-login-account-button .main-card-login-account-button__btn .main-card-login-account-button__btn--icon {
@@ -100,8 +104,8 @@ body {
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title--mobile {
   border: none;
-  font-size: 15px;
   outline: none;
+  font-size: 15px;
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password {
   border: 1px solid #D9D9D9;
@@ -120,8 +124,8 @@ body {
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-mobile .main-card-login-input-password-mobile__title {
   border: none;
-  font-size: 15px;
   outline: none;
+  font-size: 15px;
 }
 .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop {
   display: none;
@@ -145,12 +149,12 @@ body {
   flex-direction: column;
 }
 .main .main-card .main-card-login .main-card-login-btn .main-card-login-btn__login {
+  background-color: #1B1B1B;
   border-radius: 30px;
   font-family: "Lato Regular", sans-serif;
   padding: 10px 0px;
   font-size: 20px;
   font-weight: 600;
-  background-color: #1B1B1B;
   color: #FFFFFF;
   border: 2px solid #1B1B1B;
 }
@@ -226,31 +230,13 @@ body {
     white-space: nowrap;
     margin: 0px 5px;
   }
-  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user {
-    padding: 10px 10px;
-  }
-  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title {
-    display: block;
-    font-size: 11px;
-    color: #5A5A5A;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 5px;
-  }
-  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__text {
-    display: block;
-    border: none;
-    outline: none;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title--mobile {
-    display: none;
-  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password {
     padding: 10px 10px;
   }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title,
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-password__title,
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-user__title,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password__title {
     display: block;
     font-size: 11px;
@@ -259,18 +245,33 @@ body {
     margin: 0;
     margin-bottom: 5px;
   }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__text,
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-user__text {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+  }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-user__title--mobile,
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-password-mobile,
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-user__title--mobile,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-mobile {
     display: none;
   }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-password-desktop,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop {
     display: flex;
     justify-content: space-between;
   }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-password-desktop .main-card-login-input-password-desktop__text,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop .main-card-login-input-password-desktop__text {
     border: none;
     outline: none;
     font-size: 15px;
   }
+  .main .main-card .main-card-login .main-card-login-input .main-card-login-input-user .main-card-login-input-password-desktop .main-card-login-input-password-desktop__icon,
   .main .main-card .main-card-login .main-card-login-input .main-card-login-input-password .main-card-login-input-password-desktop .main-card-login-input-password-desktop__icon {
     margin-right: 10px;
   }

@@ -22,13 +22,11 @@
 
   /* Styles for the main image container and the web page login form on mobile*/
   .main-card{
-    background-color: $header-background-color;
+    @include set-background-color-and-border-radius( $header-background-color, 20px);
     margin: 30px 10px;
-    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
-    display: flex;
-    flex-direction: column;
+    @include set-flex-direction(column);
 
     .main-card-image{
       .main-card-image__img--desktop{
@@ -49,21 +47,17 @@
         }
 
         .main-card-login-account-button{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          @include set-columns(1fr 1fr);
 
           .main-card-login-account-button__btn{
-            border-radius: 30px;
+            @include set-background-color-and-border-radius( $header-background-color, 30px);
             padding: 10px 30px;
             margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include set-flex-align-and-justify-content(center, center);
             font-size: 20px;
             font-weight: bold;
             font-family: 'Lato Regular', sans-serif;
             border: 2px solid black;
-            background-color: $header-background-color;
             white-space: nowrap;
 
             .main-card-login-account-button__btn--icon{
@@ -78,9 +72,7 @@
       }
 
       .main-card-login-divider{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include set-flex-align-and-justify-content(center, center);
         margin: 30px 0px;
 
         .main-card-login-divider__line{
@@ -101,16 +93,14 @@
           border-radius: 5px;
           padding: 20px 10px;
 
-            .main-card-login-input-user__title,
-            .main-card-login-input-user__text{
-              display: none;
-            }
+          .main-card-login-input-user__title,
+          .main-card-login-input-user__text{
+            display: none;
+          }
 
-            .main-card-login-input-user__title--mobile{
-              border: none;
-              font-size: 15px;
-              outline: none;
-            }
+          .main-card-login-input-user__title--mobile{
+            @include set-border-outline-font-size(none, none, 15px);
+          }
         }
 
         .main-card-login-input-password{
@@ -125,14 +115,10 @@
           }
 
           .main-card-login-input-password-mobile{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include set-flex-align-and-justify-content(center, space-between);
 
             .main-card-login-input-password-mobile__title{
-              border: none;
-              font-size: 15px;
-              outline: none;
+              @include set-border-outline-font-size(none, none, 15px);
             }
           }
 
@@ -164,16 +150,14 @@
       }
 
       .main-card-login-btn{
-        display: flex;
-        flex-direction: column;
+        @include set-flex-direction(column);
 
         .main-card-login-btn__login{
-          border-radius: 30px;
+          @include set-background-color-and-border-radius($login-button-background-color, 30px);
           font-family: 'Lato Regular', sans-serif;
           padding: 10px 0px;
           font-size: 20px;
           font-weight: 600;
-          background-color:$login-button-background-color ;
           color: $header-background-color;
           border: 2px solid $login-button-background-color;
         }
@@ -204,8 +188,7 @@
 
         .main-card-login-account{
           .main-card-login-account-button{
-            display: grid;
-            grid-template-columns: 1fr;
+            @include set-columns(1fr);
             gap: 20px;
           }
         }
@@ -217,8 +200,7 @@
 @media (min-width: 992px){
   .main{
 
-    display: flex;
-    flex-direction: column;
+    @include set-flex-direction(column);
     align-items: center;
 
     /* Styles for the title container and informational text on desktop*/
@@ -237,8 +219,7 @@
     /* Styles for the main image container and the web page login form on desktop*/
     .main-card{
       margin: 40px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      @include set-columns(1fr 1fr);
       width: 950px;
 
       .main-card-image{
@@ -284,35 +265,12 @@
 
         .main-card-login-input{
 
-          .main-card-login-input-user{
-
-            padding: 10px 10px;
-
-            .main-card-login-input-user__title{
-              display: block;
-              font-size: 11px;
-              color: $login-dividing-line-color;
-              font-weight: 500;
-              margin: 0;
-              margin-bottom: 5px;
-            }
-            .main-card-login-input-user__text{
-              display: block;
-              border: none;
-              outline: none;
-              font-family: 'Lato', sans-serif;
-              font-size: 16px;
-              font-weight: bold;
-            }
-
-            .main-card-login-input-user__title--mobile{
-              display: none;
-            }
-          }
-
+          .main-card-login-input-user,
           .main-card-login-input-password{
+
             padding: 10px 10px;
 
+            .main-card-login-input-user__title,
             .main-card-login-input-password__title{
               display: block;
               font-size: 11px;
@@ -322,6 +280,14 @@
               margin-bottom: 5px;
             }
 
+            .main-card-login-input-user__text{
+              @include set-border-outline-font-size(none, none, 16px);
+              display: block;
+              font-family: 'Lato', sans-serif;
+              font-weight: bold;
+            }
+
+            .main-card-login-input-user__title--mobile,
             .main-card-login-input-password-mobile{
               display: none;
             }
@@ -331,17 +297,13 @@
               justify-content: space-between;
 
               .main-card-login-input-password-desktop__text{
-                border: none;
-                outline: none;
-                font-size: 15px;
+                @include set-border-outline-font-size(none, none, 15px);
               }
 
               .main-card-login-input-password-desktop__icon{
                 margin-right: 10px;
               }
             }
-
-
           }
         }
 
@@ -366,5 +328,4 @@
     }
   }
 }
-
 
