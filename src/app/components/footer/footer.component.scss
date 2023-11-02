@@ -1,0 +1,33 @@
+@import '../../../styles.scss';
+
+.footer{
+  background-color:$login-button-background-color;
+  @include set-flex-align-and-justify-content(center, center);
+  height: 70px;
+  gap: 5px;
+
+  .footer__aeronautica--desktop,
+  .footer__star-alliance--desktop,
+  .footer__st--desktop{
+    display: none;
+  }
+
+}
+
+@media (min-width: 480px){
+  .footer{
+    gap: 35px;
+
+    .footer__aeronautica--mobile,
+    .footer__star-alliance--mobile,
+    .footer__st--mobile{
+      display: none;
+    }
+
+    .footer__aeronautica--desktop,
+    .footer__star-alliance--desktop,
+    .footer__st--desktop{
+      display: block;
+    }
+  }
+}
