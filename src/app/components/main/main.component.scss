@@ -1,0 +1,331 @@
+@import '../../../styles.scss';
+
+.main{
+  background-color: $main-background-color;
+
+  /* Styles for the title container and informational text on mobile*/
+  .main-info{
+
+    .main-info__title{
+      text-align: center;
+      font-family: 'Static', sans-serif;
+      margin: 0px;
+      font-size: 30px;
+      padding-top: 30px;
+    }
+
+    .main-info__text{
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  /* Styles for the main image container and the web page login form on mobile*/
+  .main-card{
+    @include set-background-color-and-border-radius( $header-background-color, 20px);
+    margin: 30px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.199);
+    @include set-flex-direction(column);
+
+    .main-card-image{
+      .main-card-image__img--desktop{
+        display: none;
+      }
+      .main-card-image__img--mobile{
+        width: 100%;
+      }
+    }
+
+    .main-card-login{
+      margin: 20px 20px;
+
+      .main-card-login-account{
+
+        .main-card-login-account__title{
+          font-size: 23px;
+        }
+
+        .main-card-login-account-button{
+          @include set-columns(1fr 1fr);
+
+          .main-card-login-account-button__btn{
+            @include set-background-color-and-border-radius( $header-background-color, 30px);
+            padding: 10px 30px;
+            margin-right: 15px;
+            @include set-flex-align-and-justify-content(center, center);
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Lato Regular', sans-serif;
+            border: 2px solid black;
+            white-space: nowrap;
+
+            .main-card-login-account-button__btn--icon{
+              margin-right: 10px;
+            }
+
+            .main-card-login-account-button__btn:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .main-card-login-divider{
+        @include set-flex-align-and-justify-content(center, center);
+        margin: 30px 0px;
+
+        .main-card-login-divider__line{
+          width: 30%;
+        }
+
+        .main-card-login-divider__text{
+          text-align: center;
+          font-size: 14px;
+          color: $login-dividing-line-color;
+        }
+      }
+
+      .main-card-login-input{
+
+        .main-card-login-input-user{
+          border: 1px solid #D9D9D9;
+          border-radius: 5px;
+          padding: 20px 10px;
+
+          .main-card-login-input-user__title,
+          .main-card-login-input-user__text{
+            display: none;
+          }
+
+          .main-card-login-input-user__title--mobile{
+            @include set-border-outline-font-size(none, none, 15px);
+          }
+        }
+
+        .main-card-login-input-password{
+          border: 1px solid #D9D9D9;
+          border-radius: 5px;
+          padding: 20px 10px;
+          margin-top: 15px;
+
+          .main-card-login-input-password__title,
+          .main-card-login-input-password__text{
+            display: none;
+          }
+
+          .main-card-login-input-password-mobile{
+            @include set-flex-align-and-justify-content(center, space-between);
+
+            .main-card-login-input-password-mobile__title{
+              @include set-border-outline-font-size(none, none, 15px);
+            }
+          }
+
+          .main-card-login-input-password-desktop{
+            display: none;
+          }
+        }
+      }
+
+      .main-card-login-alert{
+
+        .main-card-login-alert__lifemiles{
+          cursor: pointer;
+
+          .main-card-login-alert__lifemiles--link{
+            color: #34b7c9;
+          }
+        }
+
+        .main-card-login-alert__policy{
+          font-size: 13px;
+          margin: 30px 0px;
+          cursor: pointer;
+
+          .main-card-login-alert__policy--link{
+            color: #34b7c9;
+          }
+        }
+      }
+
+      .main-card-login-btn{
+        @include set-flex-direction(column);
+
+        .main-card-login-btn__login{
+          @include set-background-color-and-border-radius($login-button-background-color, 30px);
+          font-family: 'Lato Regular', sans-serif;
+          padding: 10px 0px;
+          font-size: 20px;
+          font-weight: 600;
+          color: $header-background-color;
+          border: 2px solid $login-button-background-color;
+        }
+
+        .main-card-login-btn__account{
+          border-radius: 30px;
+          font-family: 'Lato Regular', sans-serif;
+          padding: 10px 0px;
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: 25px;
+          white-space: nowrap;
+          border: 2px solid $login-button-background-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .main{
+
+    /* Styles for the title container and informational text on mobile*/
+    .main-card{
+
+      /* Styles for the main image container and the web page login form on mobile*/
+      .main-card-login{
+
+        .main-card-login-account{
+          .main-card-login-account-button{
+            @include set-columns(1fr);
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .main{
+
+    @include set-flex-direction(column);
+    align-items: center;
+
+    /* Styles for the title container and informational text on desktop*/
+    .main-info{
+
+      .main-info__title{
+        font-size: 35px;
+        padding-top: 40px;
+      }
+
+      .main-info__text{
+        font-size: 20px;
+      }
+    }
+
+    /* Styles for the main image container and the web page login form on desktop*/
+    .main-card{
+      margin: 40px 0;
+      @include set-columns(1fr 1fr);
+      width: 950px;
+
+      .main-card-image{
+        .main-card-image__img--desktop{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .main-card-image__img--mobile{
+          display: none;
+        }
+      }
+
+      .main-card-login{
+        margin: 20px 60px;
+
+        .main-card-login-account{
+
+          .main-card-login-account__title{
+            font-size: 25px;
+          }
+
+          .main-card-login-account-button{
+
+            .main-card-login-account-button__btn{
+              padding: 5px 20px;
+
+              &:hover{
+                background-color: rgba(180, 180, 180, 0.363);
+                transition: 0.5s ease;
+              }
+            }
+          }
+        }
+
+        .main-card-login-divider{
+          .main-card-login-divider__text{
+            white-space: nowrap;
+            margin: 0px 5px;
+          }
+        }
+
+        .main-card-login-input{
+
+          .main-card-login-input-user,
+          .main-card-login-input-password{
+
+            padding: 10px 10px;
+
+            .main-card-login-input-user__title,
+            .main-card-login-input-password__title{
+              display: block;
+              font-size: 11px;
+              color: $login-dividing-line-color;
+              font-weight: 500;
+              margin: 0;
+              margin-bottom: 5px;
+            }
+
+            .main-card-login-input-user__text{
+              @include set-border-outline-font-size(none, none, 16px);
+              display: block;
+              font-family: 'Lato', sans-serif;
+              font-weight: bold;
+            }
+
+            .main-card-login-input-user__title--mobile,
+            .main-card-login-input-password-mobile{
+              display: none;
+            }
+
+            .main-card-login-input-password-desktop{
+              display: flex;
+              justify-content: space-between;
+
+              .main-card-login-input-password-desktop__text{
+                @include set-border-outline-font-size(none, none, 15px);
+              }
+
+              .main-card-login-input-password-desktop__icon{
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+
+        .main-card-login-btn{
+
+          .main-card-login-btn__login{
+            &:hover{
+              background-color: rgb(87, 86, 86);
+              transition: 0.5s ease;
+              border: 2px solid rgb(87, 86, 86);
+            }
+          }
+
+          .main-card-login-btn__account{
+            &:hover{
+              background-color: rgba(180, 180, 180, 0.788);
+              transition: 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,6 +1,31 @@
-/* Mixin to set flex align and justify content property */
+/* Mixin to set flex align and justify content properties */
 @mixin set-flex-align-and-justify-content($align-items, $justify-content){
   display: flex;
   align-items: $align-items;
   justify-content: $justify-content;
+}
+
+/* mixin to set background color and border radius properties*/
+@mixin set-background-color-and-border-radius($background-color, $border-radius){
+  background-color: $background-color;
+  border-radius: $border-radius;
+}
+
+/* mixin to set border, outline and font size properties*/
+@mixin set-border-outline-font-size($border, $outline, $font-size){
+  border: $border;
+  outline: $outline;
+  font-size: $font-size;
+}
+
+/*mixin to set the number of columns */
+@mixin set-columns($grid-template-columns){
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+}
+
+/*mixin to set the direction of elements */
+@mixin set-flex-direction($flex-direction){
+  display: flex;
+  flex-direction: $flex-direction;
 }
