@@ -1,6 +1,20 @@
 @import '../../../styles.scss';
 
-/* Styles for the website header section on mobile */
+/* Styles for the website header section on desktop */
+.header{
+  background-color: $header-background-color;
+  @include set-flex-align-and-justify-content(center, flex-start);
+  height: 70px;
+
+  .header__logo{
+    padding: 15px 0px 10px 95px ;
+  }
+}
+
+
+@media (max-width: 992px){
+
+  /* Styles for the website header section on mobile */
 .header{
   background-color: $header-background-color;
   @include set-flex-align-and-justify-content(center, center);
@@ -10,17 +24,4 @@
     padding: 0px;
   }
 }
-
-
-@media (min-width: 992px){
-  /* Styles for the website header section on desktop */
-  .header{
-    background-color: $header-background-color;
-    @include set-flex-align-and-justify-content(center, flex-start);
-    height: 70px;
-
-    .header__logo{
-      padding: 15px 0px 10px 95px ;
-    }
-  }
 }

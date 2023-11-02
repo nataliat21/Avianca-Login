@@ -2,10 +2,6 @@
 @import '../src/app/core/mixins.scss';
 @import '../src/app/core/variables.scss';
 
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('../src/assets/fonts/Roboto-Regular.ttf') format('truetype');
-}
 
 @font-face {
   font-family: 'Static';
@@ -18,7 +14,7 @@
 }
 
 body{
-  font-family: 'Roboto Regular', sans-serif;
+  font-family: 'Lato Regular', sans-serif;
   margin: 0px;
   padding: 0px;
 }
